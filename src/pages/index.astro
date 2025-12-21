@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Portfolio">
+  <Header />
+
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="py-24 fade-in">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+        <img
+          src="/profile.png"
+          alt="Elky"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-[var(--accent)]"
+          style="object-position: 40% 80%;"
+        />
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Hey, I'm Elky
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--muted)] mb-8 max-w-2xl italic">
+            I'm a developer branching into entrepreneurship.
+          </p>
+          <a
+            href="/blog"
+            class="inline-block text-[var(--accent)] hover:underline text-lg font-medium"
+          >
+            Read my blog →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Focuses Section -->
+  <section class="py-16 fade-in" style="animation-delay: 0.2s;">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Current Focuses</h2>
+      <ul class="space-y-4">
+        <li class="flex gap-3">
+          <span class="text-[var(--muted)] mt-1">→</span>
+          <div>
+            <p class="text-lg">
+              <a href="https://smartpropertycheck.com" class="text-[var(--accent)] hover:underline">Smart Property Check</a> - A smart home inspection tool to make reporting easier for Property Managers and their tenants
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[var(--muted)] mt-1">→</span>
+          <div>
+            <p class="text-lg">
+              Project short clips
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[var(--muted)] mt-1">→</span>
+          <div>
+            <p class="text-lg">
+              Project resell
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[var(--muted)] mt-1">→</span>
+          <div>
+            <p class="text-lg">
+              Writing about development and design on my <a href="/blog" class="text-[var(--accent)] hover:underline">blog</a>
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-[var(--muted)] mt-1">→</span>
+          <div>
+            <p class="text-lg">
+              <a href="https://www.bytethreadsllc.com" class="text-[var(--accent)] hover:underline">ByteThreads LLC</a> - This is the parent company of all the mention projects. It is also where I accept freelance work. If you are interested, email me at <a href="mailto:contact@ByteThreadsllc.com" class="text-[var(--accent)] hover:underline">contact@ByteThreadsllc.com</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 fade-in" style="animation-delay: 0.4s;">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">About</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-lg text-[var(--muted)] mb-4">
+          I'm a experienced software developer, with a passion for developing new ideas. I bring ideas to life through clean code and thoughtful design. After so much time in the corporate world and "owning" code, why not own products.
+        </p>
+        <p class="text-lg text-[var(--muted)]">
+          Currently working on passion projects and sharing my knowledge through blog posts about web development, app development, design, data, and technology.
+        </p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
